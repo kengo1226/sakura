@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Yuji+Mai&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>TOPページ</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1>
+          <a href="/">
+            <img src="./images/logo.png" alt="logo" />
+          </a>
+        </h1>
+        <ul>
+          <li><a href="/about.html">COMPANY</a></li>
+          <li><a href="/">PRODUCTS</a></li>
+          <li><a href="/recruit.html">RECRUIT</a></li>
+          <li class="navBtn"><a href="">CONTACT</a></li>
+        </ul>
+        <i id="navBtn" class="fa-solid fa-bars forSp"></i>
+        <i id="closeBtn" class="fa-sharp fa-regular fa-circle-xmark"></i>
+      </nav>
+    </header>
+
+    <main>
+      <!-- <section id="hero">
+        <img src="./images/hero1-img.jpg" alt="hero-img" />
+        <div class="heroText">
+          <h2>MAKE YOURSELF<br />BE BEAUTIFUL</h2>
+          <p>自分を美しく。</p>
+        </div>
+      </section> -->
+
+      <section id="hero">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./images/hero1-img.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/hero2-img.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/hero3-img.jpg" alt="" />
+            </div>
+          </div>
+          <div class="heroText">
+            <h2>MAKE YOURSELF<br />BE BEAUTIFUL</h2>
+            <p>自分を美しく。</p>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+      <section id="message">
+        <div class="container">
+          <p>
+            当社は、世界中から厳選した商品を集め、取り扱っています。<br
+              class="forPc"
+            />
+            お客様のニーズに合わせた商品を提供し、新しい価値や驚きを届けることを目指しています。<br
+              class="forPc"
+            />
+            また、卸しも行っており、販売店舗様にもご提供しています。<br
+              class="forPc"
+            />
+            私たちは、日本でまだ見たことのない商品を通じて、より豊かな生活を実現することを目指しています。
+          </p>
+          <button><a href="/about.html">会社概要</a></button>
+        </div>
+      </section>
+      <section id="services">
+        <div class="container">
+          <div class="mainHl">
+            <h3>SERVICES<br /><span>事業内容</span></h3>
+            <div class="border"></div>
+          </div>
+          <p>
+            桜屋は、美容用品及び日用品や通信機器の販売を手がける総合商社です。<br />
+            お客様とのコミュニケーションを大切に。<br />
+            リーズナブルな価格でより良い商品を、迅速、丁寧に心を込めて、お客様へお届けします。
+          </p>
+          <div class="serviceBox">
+            <div class="card">
+              <img src="./images/icon1.png" alt="" />
+              <h3>輸入</h3>
+              <p>
+                世界中から選りすぐった品々を日本に届け、メーカーとお客様のニーズを繋ぎ合わせ、新しい価値を提供します。
+              </p>
+            </div>
+            <div class="card">
+              <img src="./images/icon2.png" alt="" />
+              <h3>卸売り</h3>
+              <p>
+                お取り扱いいただける店舗様を募集中です。個人・法人問わずお気軽にお問い合わせください。心よりお待ちしております。
+              </p>
+            </div>
+            <div class="card">
+              <img src="./images/icon3.png" alt="" />
+              <h3>小売り</h3>
+              <p>
+                Amazon<br />
+                楽天<br />
+                ヤフーショッピング<br />
+                au PAY マーケット<br />
+                Qoo10
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="products">
+        <div class="container">
+          <div class="mainHl">
+            <h3>PRODUCTS<br /><span>取り扱いメーカー</span></h3>
+            <div class="border"></div>
+          </div>
+          <p>Coming Soon</p>
+        </div>
+      </section>
+      <section id="bottom">
+        <div class="left">
+          <a href="">
+            <img src="./images/contact-img.jpg" alt="" />
+            <p>お問い合わせ</p>
+          </a>
+        </div>
+        <div class="right">
+          <img src="./images/rercruit-img.jpg" alt="" />
+          <p>採用情報</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footerContainerr">
+        <ul>
+          <li><a href="">COMPANY</a></li>
+          <li><a href="">PRODUCTS</a></li>
+          <li><a href="">RECRUIT</a></li>
+          <li><a href="">CONTACT</a></li>
+        </ul>
+        <p>Copyrights Allright Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

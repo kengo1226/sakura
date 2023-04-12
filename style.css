@@ -1,0 +1,781 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", Meiryo, sans-serif;
+}
+
+/* ------- Utility class ------- */
+.forPc {
+  display: block;
+}
+
+.forSp {
+  display: none;
+}
+
+#closeBtn {
+  display: none;
+}
+
+.container {
+  width: 1000px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.mainHl {
+  margin-bottom: 25px;
+}
+
+.mainHl h3 {
+  font-size: 45px;
+  line-height: 0.9;
+  font-weight: 900;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.mainHl h3 span {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.mainHl .border {
+  width: 250px;
+  height: 10px;
+  margin-top: 15px;
+  background-color: #f77de4;
+}
+
+/* ---- header  ---- */
+header {
+  padding: 10px;
+}
+
+header nav {
+  width: 1200px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+}
+
+header nav ul li {
+  margin-right: 25px;
+}
+
+header nav ul li:last-of-type {
+  margin-right: 0;
+}
+
+header nav ul li a {
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+header nav ul li a:hover {
+  opacity: 0.75;
+}
+
+header img {
+  width: 75px;
+}
+
+header .navBtn {
+  /* background: #f77de4; */
+}
+
+header .navBtn a {
+  color: #fff;
+  display: block;
+  padding: 5px 25px;
+  border-radius: 100px;
+  background: #f77de4;
+}
+
+/* ----- hero section ------ */
+#hero {
+  width: 100%;
+  height: 650px;
+}
+
+#hero .swiper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#hero .swiper .heroText {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  /* width: 100%; */
+  height: auto;
+  color: #fff;
+  transform: translateY(-50%);
+  font-family: "Noto Sans JP", sans-serif;
+  z-index: 1;
+}
+
+#hero .heroText h2 {
+  font-weight: 900;
+  font-size: 55px;
+  letter-spacing: 0.1em;
+}
+
+#hero .heroText p {
+  font-weight: bold;
+  font-size: 38px;
+}
+
+/* message */
+#message {
+  width: 100%;
+  padding: 60px 0;
+}
+
+#message p {
+  text-align: center;
+  font-size: 20px;
+  font-family: serif;
+  line-height: 2;
+}
+
+#message button {
+  border: 1px solid #f77de4;
+  border-radius: 100px;
+  background-color: #fff;
+  width: 220px;
+  height: 40px;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+  margin-top: 38px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#message button:hover {
+  background-color: #f77de4;
+}
+
+#message button a {
+  text-decoration: none;
+  color: #f77de4;
+  display: block;
+  height: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 40px;
+  border-radius: 100px;
+}
+
+#message button:hover a {
+  color: #fff;
+}
+
+/* ----- service ----- */
+#services {
+  width: 100%;
+  background: #f9f9f9;
+  padding: 100px 0;
+}
+
+#services .serviceBox {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+#services .serviceBox .card {
+  width: calc(100% / 3 - 12px);
+  box-shadow: 0px 0px 15px -5px #c9c9c9;
+  padding: 35px 22px;
+}
+
+#services .serviceBox .card img {
+  width: 95px;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#services .serviceBox .card h3 {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 20px;
+  margin-bottom: 12px;
+}
+
+/* ----- products ----- */
+#products {
+  padding: 100px 0;
+}
+
+#products p {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* ----- bottom共通 ---- */
+#bottom {
+  width: 100%;
+  display: flex;
+  height: 250px;
+}
+
+#bottom .left,
+#bottom .right {
+  width: 50%;
+  position: relative;
+}
+
+#bottom .left a,
+#bottom .right a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+#bottom .left img,
+#bottom .right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#bottom .left::before,
+#bottom .right::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+#bottom .left p,
+#bottom .right p {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* ----- subhero section 固定ページ ------ */
+#subHero {
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+
+#subHero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+#subHero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#subHero .heroText {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  /* width: 100%; */
+  height: auto;
+  color: #fff;
+  transform: translateY(-50%);
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+#subHero .heroText h2 {
+  font-weight: 900;
+  font-size: 55px;
+  letter-spacing: 0.1em;
+}
+
+#subHero .heroText p {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+/* subpage */
+#services.page {
+  background-color: #fff;
+}
+
+#company .detail {
+  margin-top: 55px;
+}
+
+#company ul li {
+  display: flex;
+  padding: 10px 20px;
+  border-bottom: 1px solid #707070;
+  margin-top: 10px;
+}
+
+#company ul li p {
+  width: 800px;
+  /* background-color: aqua; */
+}
+
+#company ul li p.detailTitle {
+  width: 220px;
+  /* background-color: orange; */
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#map {
+  width: 100%;
+  padding: 100px 0;
+}
+
+#map .mapContainer {
+  width: 100%;
+  height: 500px;
+  margin-top: 55px;
+}
+
+/* ----- recruit 固定ページ ----- */
+#intro {
+  padding: 100px 0;
+}
+#intro .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#intro .container h3,
+#intro .container p {
+  width: 47%;
+}
+
+#intro .container h3 {
+  font-size: 33px;
+  font-weight: bold;
+}
+
+.middle {
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.middle .container img {
+  width: 100%;
+  /* height: 350px; */
+  height: 395px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+#company.recruitPage {
+  margin-bottom: 100px;
+}
+
+#company button {
+  border: none;
+  background: none;
+  display: block;
+  margin: 0 auto;
+}
+
+#company button a {
+  display: block;
+  text-decoration: none;
+  background-color: #f77de4;
+  color: #fff;
+  font-size: 16px;
+  width: 230px;
+  height: 45px;
+  text-align: center;
+  border-radius: 100px;
+  line-height: 45px;
+  font-weight: bold;
+  margin: 40px auto 0;
+}
+
+/* ---- footer ---- */
+footer {
+  background: #000;
+  padding: 40px;
+}
+
+footer ul {
+  display: flex;
+  padding-bottom: 35px;
+  width: 600px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+footer p {
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* --------- responsive tablet ---------- */
+@media screen and (max-width: 1200px) {
+  /* ------- Utility class ------- */
+  .container {
+    width: 94%;
+    max-width: 94%;
+    margin: 0 auto;
+  }
+
+  .mainHl {
+    margin-bottom: 3%;
+  }
+
+  .mainHl h3 {
+    font-size: 3rem;
+    line-height: 0.9;
+    font-weight: 900;
+    font-family: "Noto Sans JP", sans-serif;
+  }
+
+  .mainHl h3 span {
+    font-size: 2.2rem;
+    font-weight: 700;
+  }
+
+  .mainHl .border {
+    width: 30%;
+    height: 10px;
+    margin-top: 2%;
+    background-color: #f77de4;
+  }
+
+  /* header */
+  header {
+    width: 100%;
+  }
+
+  header nav {
+    width: 90%;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  /* header nav ul {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  } */
+
+  /* ----- service ----- */
+  #services {
+    width: 100%;
+    background: #f9f9f9;
+    padding: 10% 0;
+  }
+
+  #services .serviceBox {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+  }
+
+  #services .serviceBox .card {
+    box-shadow: 0px 0px 15px -5px #c9c9c9;
+    padding: 5% 3%;
+    width: calc(100% / 3 - 1.5%);
+  }
+
+  #services .serviceBox .card img {
+    width: 40%;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  #services .serviceBox .card h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  #company .detail {
+    margin-top: 8%;
+  }
+
+  #company ul li {
+    display: flex;
+    padding: 2% 3%;
+    border-bottom: 1px solid #707070;
+    margin-top: 2%;
+  }
+
+  #company ul li p {
+    width: 70%;
+    /* background-color: aqua; */
+  }
+
+  #company ul li p.detailTitle {
+    width: 30%;
+    /* background-color: orange; */
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  #map {
+    width: 100%;
+    padding: 100px 0;
+  }
+
+  #map .mapContainer {
+    width: 100%;
+    height: 500px;
+    margin-top: 55px;
+  }
+
+  #intro {
+    padding-top: 7%;
+    padding-bottom: 10%;
+  }
+
+  #intro .container h3 {
+    font-size: 2rem;
+  }
+
+  .middle .container img {
+    height: 42vw;
+  }
+}
+/* --------- responsive smartphone ---------- */
+@media screen and (max-width: 768px) {
+  .forPc {
+    display: none;
+  }
+
+  .forSp {
+    display: block;
+  }
+
+  .mainHl {
+    margin-bottom: 3%;
+  }
+
+  .mainHl h3 {
+    font-size: 8.2vw;
+    line-height: 1;
+    font-weight: 900;
+    font-family: "Noto Sans JP", sans-serif;
+  }
+
+  .mainHl h3 span {
+    font-size: 6.5vw;
+    font-weight: 700;
+  }
+
+  .mainHl .border {
+    width: 40%;
+    height: 2vw;
+    margin-top: 3%;
+    background-color: #f77de4;
+  }
+
+  /* header */
+  header nav {
+    width: 90%;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  header nav ul {
+    position: fixed;
+    top: 0;
+    right: -120%;
+    width: 80%;
+    height: 100vh;
+    z-index: 10;
+    background: #fff;
+    display: block;
+    padding: 40% 10%;
+    transition: all 0.3s;
+  }
+
+  header.active nav ul {
+    right: 0;
+    box-shadow: 0px 0px 15px -5px #777777;
+  }
+
+  header nav ul li {
+    font-size: 5vw;
+    margin-bottom: 15%;
+  }
+
+  header nav .fa-solid {
+    z-index: 100;
+    font-size: 5vw;
+  }
+
+  header.active #navBtn {
+    display: none;
+  }
+
+  header.active #closeBtn {
+    display: block;
+    position: fixed;
+    top: 2%;
+    right: 4.2%;
+    font-size: 8vw;
+    z-index: 100;
+  }
+
+  /* ----- hero ----- */
+  #hero {
+    height: 70vh;
+  }
+
+  #hero .swiper .heroText {
+    left: 4%;
+  }
+
+  #hero .heroText h2 {
+    font-size: 9vw;
+  }
+
+  #hero .heroText p {
+    font-size: 7.2vw;
+  }
+
+  #message p {
+    font-size: 4vw;
+  }
+
+  #map .mapContainer {
+    height: 60vw;
+    margin-top: 8%;
+  }
+
+  #subHero {
+    height: 75vw;
+  }
+
+  #subHero .heroText h2 {
+    font-size: 8.2vw;
+  }
+
+  #subHero .heroText p {
+    font-size: 7vw;
+  }
+
+  #services {
+    padding-bottom: 16%;
+  }
+
+  #map {
+    padding-top: 16%;
+  }
+
+  #bottom {
+    display: block;
+    height: auto;
+  }
+
+  #bottom .left,
+  #bottom .right {
+    width: 100%;
+    height: 42vw;
+  }
+
+  #intro {
+    padding-top: 10%;
+    padding-bottom: 16%;
+  }
+
+  #intro .container {
+    display: block;
+  }
+
+  #intro .container h3 {
+    font-size: 6vw;
+  }
+
+  #intro .container p {
+    margin-top: 6%;
+  }
+
+  #intro .container h3,
+  #intro .container p {
+    width: 100%;
+  }
+
+  .middle .container img {
+    height: 50vw;
+  }
+
+  /* ----- footer ---- */
+  footer ul {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  /* ーー service ーーー */
+  #services .serviceBox {
+    display: block;
+  }
+
+  #services .serviceBox .card {
+    /* width: 100%;
+    margin-bottom: 3.5%; */
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 3.5%;
+    padding: 7% 5%;
+  }
+
+  #services .serviceBox {
+    padding-top: 8%;
+  }
+}
