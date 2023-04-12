@@ -756,7 +756,12 @@ footer p {
 
   /* ----- footer ---- */
   footer ul {
-    width: 80%;
+    width: 95%;
+    display: block;
+  }
+
+  footer ul li {
+    margin-bottom: 5%;
   }
 }
 
